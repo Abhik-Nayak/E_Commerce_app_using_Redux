@@ -15,14 +15,13 @@ const ProductListing = () => {
       .catch((err) => {
         console.log("Err", err);
       });
-      console.log(response.data);
       dispatch(setProducts(response.data));
   }
   useEffect(() =>{
     fetchProducts();
   },[] );
   
-  console.log(products);
+
   return (
     <div className='ui grid container'>
       <ProductComponent />
